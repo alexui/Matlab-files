@@ -1,0 +1,113 @@
+﻿/* standard markup */
+a:link 						{color: #0000FF;	text-decoration:none;}
+a:visited 					{color: #000;	text-decoration:none;}
+a:hover 					{color: #660000; 	text-decoration:underline;}
+a:active 					{color: #000;	text-decoration:none;}
+a:focus 					{color: #000;	text-decoration:underline;}
+
+h6 							{color: #000; 	font-size:9pt;	font-weight:normal;}
+h5 							{color: #000; 	font-size:9pt;	font-weight:normal;}
+h4 							{color: #000; 	font-size:9pt;	font-weight:normal;}
+h3 							{color: #000; 	font-size:9pt;	font-weight:normal;}
+h2 							{color: #000; 	font-size:9pt;	font-weight:normal;}
+h1 							{color: #000; 	font-size:11pt;	font-weight:bold;}
+
+body						{color: #000;	font-size:9pt; 	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;}
+
+/* stylized text logo */
+.text_logo					{color:#000; 	font-size:14pt; font-style:oblique; }
+
+/* page title */
+#page_title					{color:#000; 		font-size:14pt; font-style:oblique; }
+#page_title	h1				{color:#000; 		font-size:14pt; font-style:oblique; }
+
+/* icons */	
+#icons						{color:#DFDFDF;		font-size:8pt;	font-weight:normal; 	font-size:8pt; 	font-family:Arial;}
+		#icons a:link		{color:#DFDFDF;} 
+		#icons a:visited	{color:#DFDFDF;} 
+		#icons a:hover		{color:#ffffff; 	text-decoration:underline;} 
+		#icons a:active		{color:#DFDFDF;}
+		
+/* bottom links */
+#bottom_links 				{color:#fff;		font-size:8pt;}
+ #bottom_links a:link		{color:#fff;} 
+ #bottom_links a:visited	{color:#fff;} 
+ #bottom_links a:hover		{color:#ccc; 	text-decoration:none;} 
+ #bottom_links a:active		{color:#fff;}
+ 
+/* site info and copyright */
+#site_info					{color:#fff; 	font-size:8pt;}
+.copyright 					{color:#000; 	font-size:8pt;}
+
+/* content in body1 */
+.body1						{color:#000; vertical-align:top;}
+ .paragraph_heading			{color:#000; 	font-size:11pt; font-weight:bold;}
+ .body1 p					{color:#000; 	font-size:9pt;}
+ .body1 h1					{color:#000; 	font-size:14pt;}
+ .body1 h2					{color:#000; 	font-size:11pt; font-weight:bold;}
+ .body1_link				{color:#000; 	font-size:9pt;}
+ .redfont 					{color:#660000; 	font-size:9pt;	font-weight:bold;}
+ .body_heading h1			{color:#000;		font-size:12pt; font-weight:bold; 	font-style:italic;}
+
+
+/* content in body2 left column*/
+.body2						{color:#000; 	font-size:8pt;}
+ .body2 p					{color:#000; 	font-size:8pt;}
+ .body2 h1					{color:#000;		font-size:12pt; font-weight:bold;}
+ .body2 h2					{color:#000;		font-size:9pt; 	font-weight:bold;}
+ .body2_link				{color:#000;		font-size:9pt;}
+ 
+ /* headings */
+ .body_heading h1			{color:#000;		font-size:12pt; font-weight:bold; 	font-style:italic;}
+ .menu_heading				{color:#fff;		font-size:12pt; font-weight:bold; 	font-style:italic; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 30px; vertical-align:top;}
+
+ .news						{color:#000; 	text-align:left;}
+ .news p					{color:#000; 		margin:0px 0px 0px 0px; font-size:8pt;}
+ .news h1					{color:#000; 	font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:center;}
+ .news h2					{color:#000; 	font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:center;}
+ .news h3					{color:#000; 	font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:center;}
+ .news a:link				{color:#665;} 
+ .news a:visited			{color:#665;} 
+ .news a:hover				{color:#000; 	text-decoration:none;} 
+ .news a:active				{color:#665;}
+ .news_heading				{color:#fff; 	font-size:12pt; font-weight:bold; font-variant:small-caps; text-align:left; padding:4px 0px 9px 0px;}
+ .news_content				{color:#000000;		font-size:8pt;}
+
+ .info						{font-size:8pt; 	font-weight:normal;}
+ .info h1					{font-size:9pt; 	font-weight:bold; color: #000;}
+ .info p 					{font-size:8pt; 	font-weight:normal; color:#000;}
+ 
+/* vertical menu bar */
+
+.Vertical_Menu li a 		{color:#000;		font-size:9pt;font-weight:bold; 	text-decoration:none;}	
+.Vertical_Menu li a:visited {color:#000;		font-size:9pt;font-weight:bold;}								
+.Vertical_Menu li a:link 	{color:#000;		font-size:9pt;font-weight:bold;}									
+.Vertical_Menu li a:hover 	{color:#ff9900;		font-size:9pt;font-weight:bold;}
+
+/* drop menu main button */
+
+.chromestyle ul				{color: #A5AFBC; font-size:8pt; font-weight:bold;}
+.chromestyle ul li a        {color: #A5AFBC;}
+.chromestyle ul li a:visited{color: #A5AFBC;}
+.chromestyle ul li a:link   {color: #A5AFBC;}
+.chromestyle ul li a:hover	{color: #ffcc00; text-decoration: none;}
+.chromestyle ul li a:active {color: #A5AFBC;}
+
+/* drop menu sub menu button */
+
+.dropmenudiv a				{color: #000; text-indent: 15px; font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:left;}
+.dropmenudiv a:visited		{color: #000; font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:left; text-decoration:none;}
+.dropmenudiv a:active		{color: #000; font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:left; text-decoration:none;}
+.dropmenudiv a:link			{color: #000; font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:left; text-decoration:none;}
+.dropmenudiv a:hover		{color: #fff; font-size:8pt; font-weight:bold; font-variant:small-caps; text-align:left; text-decoration:none; background-color:#394462;}
+
+.wrapper_catalog 			{color:#665;}
+.wrapper_catalog h2			{color:#665;}
+.catalog_image 				{color:#665;}
+.catalog_description1 		{color:#665;}
+.catalog_backtotop 			{color:#665;}
+.catalog_learnmore 			{color:#665;}
+.catalog_description2 		{color:#665;}
+.catalog_price 				{color:#665;}
+.catalog_divider hr 		{color:#665;}
+.catalog_addtocart 			{color:#665;}

@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0030)http://www.genave.com/dtmf.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- #BeginTemplate "Templates/fullscreen-2014-1.dwt" --><!-- DW6 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- #BeginEditable "meta" -->
+<title>Genave - DTMF Explained</title>
+<meta name="Keywords" content="DTMF Encoder, DTMF Decoder, DTMF">
+<meta name="Description" content="DTMF Explained - How it works, and why it&#39;s employed as a signaling format.">
+<!-- #EndEditable -->
+
+<meta name="language" content="en-US">
+
+
+<!-- Links to Style Sheets Begin-->
+<link href="./Genave - DTMF Explained_files/fullscreen.css" rel="stylesheet" type="text/css">
+<link href="./Genave - DTMF Explained_files/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="./Genave - DTMF Explained_files/menu.css" rel="stylesheet" type="text/css">
+<link href="./Genave - DTMF Explained_files/fonts.css" rel="stylesheet" type="text/css">
+<!-- Links to Style Sheets End-->
+
+<!-- Links to Javascript files Begin-->
+<script type="text/javascript" src="./Genave - DTMF Explained_files/special_functions.js"></script>
+<script type="text/javascript" src="./Genave - DTMF Explained_files/faq.js"></script>
+<script type="text/javascript" src="./Genave - DTMF Explained_files/menu.js"></script>
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="../javascript/pngfix.js"></script>
+<![endif]-->
+<!-- Links to Javascript files End-->
+
+<!-- #BeginEditable "flash_variables" -->
+<script type="text/javascript">
+// if this page is in:
+//   the root folder, then set this variable to ./
+//   a sub folder one level deep, then set this variable to ../
+//   a sub folder two levels deep, then set this variable to ../../
+var rootFlashLocation = "../";
+var music_on           = 0; // 0 = off, 1 = on
+var clock24hour        = 1; // 0 = 12 hour clock, 1 = 24 hour clock
+var maxIntroViews      = 0; // -1 = always display, 0 = never display, and any other positive integer = the number of times to display the intro sequence
+var isPersistantCookie = 0; // 0 =  no, 1 = yes -- persistant means it will save even after the user closes their browser
+</script>
+<style type="text/css">
+<!--
+.style2 {color: #FFFFFF}
+.style4 {color: #FFFFFF; font-weight: bold; }
+.style5 {color: #000000}
+.style6 {color: #000000; font-weight: bold; }
+.style7 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style8 {font-size: 12pt}
+-->
+</style>
+<!-- #EndEditable -->
+
+<style type="text/css">
+.style1 {
+	text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<!--main-->
+	<div id="main">
+	
+<!--top-->
+	<div class="top">
+		<div class="top_r">
+			<div class="top_l">
+<table class="header_w" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td class="header1" scope="row">
+		
+		<div class="page_header">
+				
+<!--page title-->
+				<div id="page_title" style="left: 460px; top: 150px; position:absolute">
+					<!-- #BeginEditable "page_title" --><h1>DTMF Format </h1><!-- #EndEditable --></div>
+
+<!--icons-->
+				<div id="icons" style="right: 55px; top: 0px; position:absolute; height:25px"><!-- #BeginLibraryItem "Library/icons.lbi" --><table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td>
+<a href="http://www.genave.com/index.htm"><img src="./Genave - DTMF Explained_files/home.gif" width="26" height="26" alt="home page"></a>
+<a href="http://www.genave.com/contact.htm"><img src="./Genave - DTMF Explained_files/contact.gif" width="26" height="26" alt="contact"></a>
+<a href="http://www.genave.com/sitemap.htm"><img src="./Genave - DTMF Explained_files/sitemap.gif" width="26" height="26" alt="sitemap"></a>
+</td>
+	</tr>
+</tbody></table><!-- #EndLibraryItem --></div>
+		
+<!--search-->
+				<div id="search" style="right: 30px; top: 70px"><!-- #BeginLibraryItem "Library/search.lbi" -->
+				  <!-- Google CSE Search Box Begin222s -->
+                  <script type="text/javascript">
+
+//Enter domain of site to search.
+var domainroot="www.genave.com"
+
+function Gsitesearch(curobj){
+curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
+}
+
+function submitSearchForm() {
+  var myForm = document.getElementById("searchForm");
+  
+  Gsitesearch(myForm);
+  myForm.submit();
+}
+                  </script>
+                  <form id="searchForm" action="http://www.google.com/search" method="get" onsubmit="Gsitesearch(this)">
+                    <span class="search-container">
+                      <input name="q" type="hidden">
+                      <input name="qfront" class="searchbox" type="text" style="width: 100px">
+                      <a href="javascript:submitSearchForm()"><img alt="" class="search" src="./Genave - DTMF Explained_files/search.gif"></a> </span>
+                  </form>
+				<!-- #EndLibraryItem --></div>
+		
+<!--logo-->
+				<div id="logo" style="left: 60px; top: 4px; position:absolute"><!-- #BeginLibraryItem "Library/logo.lbi" -->
+				  <div> <img src="./Genave - DTMF Explained_files/genave-logo-top-4.png" width="400" height="100" alt="logos"> </div>
+                <!-- #EndLibraryItem --></div>
+
+			  </div>
+		
+		</td>
+	</tr>
+	<tr>
+		<td class="header2" scope="row">
+		
+		<div class="menu_header">
+<!--dropmenu-->
+				<div id="dropmenu"><!-- #BeginLibraryItem "Library/top_buttons.lbi" -->
+				  <div class="chromestyle" id="chromemenu">
+				    <ul>
+				      <li><a href="http://www.genave.com/index.htm">Home</a></li>
+				      <li><a href="" rel="dropmenu2">Products</a></li>
+				      <li><a href="" rel="dropmenu3">Contact</a></li>
+				      <li><a href="" rel="dropmenu4">About Us</a></li>
+			        </ul>
+			      </div>
+                  <!--2nd drop down menu -->
+                  <div id="dropmenu2" class="dropmenudiv" style="width: 170px;"> <a href="http://www.genave.com/rxc-3080-prod.htm">RXC-3080</a>
+<a href="http://www.genave.com/rxc-3080-prod.htm">Alert Station</a>
+<a href="http://www.genave.com/rxc-3080-trbo-prod.htm">MotoTRBO Alert</a>
+<a href="http://www.genave.com/rxc-4000-prod.htm">Solar 4000</a>
+<a href="http://www.genave.com/enc-3300-dtmf-prod.htm">Encoder DTMF</a>
+<a href="http://www.genave.com/rxc-3000-prod.htm">Remote Control</a>
+<a href="http://www.genave.com/rxc-3000-srn-prod.htm">Siren Controls</a>
+<a href="http://www.genave.com/ers-7-prod.htm">Mobile Alert Trailer</a>
+<a href="http://www.genave.com/faqs.htm">FAQ's</a>
+<a href="http://www.genave.com/manuals.htm">Manuals</a>
+ </div>
+                  <!--3rd drop down menu -->
+                  <div id="dropmenu3" class="dropmenudiv" style="width: 100px;"> <a href="http://www.genave.com/contact.htm#email">Email</a> <a href="http://www.genave.com/contact.htm#phone">Phone</a> <a href="http://www.genave.com/contact.htm#form">Form</a> </div>
+                  <!--4th drop down menu -->
+                  <div id="dropmenu4" class="dropmenudiv" style="width: 100px;"> <a href="http://www.genave.com/about_us.htm">Company</a> <a href="http://www.genave.com/privacy.htm">Privacy Info</a> </div>
+                  <script type="text/javascript">
+
+cssdropdown.startchrome("chromemenu")
+                  </script>
+				<!-- #EndLibraryItem --></div>
+			  </div>
+		
+		</td>
+	</tr>
+	<tr>
+		<td class="header3" scope="row">
+		
+<!--flash header-->
+		
+				<div class="flash_header">
+				
+				</div>
+
+		</td>
+	</tr>
+</tbody></table>
+			
+
+<!--header-->
+	</div></div></div>	
+	
+<!--center-->
+	<div class="center"><div class="c2"><div class="c6"><div class="c4"><div class="c8"><div class="c5"><div class="c7"><div class="c3"><div class="c1">
+
+<!--center top-->
+	<div class="c_top"></div>
+	
+<!--content tables-->
+	<table class="content">
+		<tbody><tr><td scope="col" class="c_l">&nbsp;</td>
+			<td scope="col" class="c_menu">
+			
+<div class="body2"><!-- #BeginEditable "body2" -->
+
+<!--menu top-->
+		<div class="menu_heading">Navigate</div>
+		
+
+			
+	<!--copy for left menu goes here-->
+
+<!--menu--><!-- #BeginLibraryItem "Library/vertical_menu.lbi" -->
+<div class="Vertical_Menu">
+  <ul class="myVerticalMenu">
+    <li><a href="http://www.genave.com/index.htm">Home</a></li>
+    <li><a href="http://www.genave.com/catalog.htm">Products</a></li>
+    <ul>
+      <li><a href="http://www.genave.com/hpes-600-a-prod.htm">Alert 600™</a></li>
+      <li><a href="http://www.genave.com/rxc-3080-prod.htm">Alert Station</a></li>
+      <li><a href="http://www.genave.com/rxc-3080-trbo-prod.htm">MotoTrbo™ Alert</a></li>
+      <li><a href="http://www.genave.com/rxc-4000-prod.htm">Solar 4000</a></li>
+      <li><a href="http://www.genave.com/rxc-3000-prod.htm">Remote Control</a></li>
+      <li><a href="http://www.genave.com/enc-3300-dtmf-prod.htm">Activation Encoder</a></li>
+      <li><a href="http://www.genave.com/rxc-3000-srn-prod.htm">Siren Controls</a></li>
+      <li><a href="http://www.genave.com/ers-7-prod.htm">Mobile Siren Trailer</a></li>
+    </ul>
+    <li><a href="http://www.genave.com/faqs.htm">FAQs</a></li>
+    <li><a href="http://www.genave.com/tech_support.htm">Tech Support</a></li>
+    <li><a href="http://www.genave.com/manuals.htm">Manuals / App Notes</a></li>
+    <li><a href="http://www.genave.com/contact.htm">Contact</a></li>
+  </ul>
+</div>
+<!-- #EndLibraryItem -->&nbsp;
+<!--info--><!-- #BeginLibraryItem "Library/news_box1.lbi" -->	<div class="info">
+		<h1>News</h1>
+		<p>&nbsp;</p>
+		<p><span style="font-size: 10pt" class="style1">New Models - MotoTRBO</span></p>
+		<p>New RXC-3080-Trbo with  Virtual DTMF signaling works with Motorola MotoTRBO portable and mobile radios in true digital mode.</p>
+	</div>
+<!-- #EndLibraryItem --><p>&nbsp;
+	</p>
+	
+<!--menu end--><br>
+			
+<!-- #EndEditable --></div>
+
+	</td><td scope="col" class="c_c">&nbsp;</td>
+	<td scope="col" class="body1">
+	
+	
+<!--body-->		
+		
+<p><!-- #BeginEditable "body1" -->
+
+		</p><h1 class="style7 style8"> DTMF Explained</h1>
+              <p>DTMF stands for <strong>D</strong>ual <strong>T</strong>one - <strong>M</strong>ulti <strong>F</strong>requency and it is the basis 
+                for your telephone system. DTMF is actually the generic term for 
+                Touch-Tone (touch-tone is a registered trademark of ATT). Your 
+                touch-tone® phone is technically a DTMF generator that produces 
+                DTMF tones as you press the buttons.</p>
+
+              <hr>
+							<br>
+              <h3 class="style7">How does it work?</h3>
+              <p>When you press the buttons on the keypad, a connection is made 
+                that generates two tones at the same time. A "Row" tone 
+                and a "Column" tone. These two tones identify the key 
+                you pressed to any equipment you are controlling. If the keypad 
+                is on your phone, the telephone company's "Central Office" 
+                equipment knows what numbers you are dialing by these tones, and 
+                will switch your call accordingly. If you are using a DTMF keypad 
+                to remotely control equipment, the tones can identify what unit 
+                you want to control, as well as which unique function you want 
+                it to perform.</p>
+	              <div align="center"><img src="./Genave - DTMF Explained_files/motmicdtmfpalm.gif" alt="Palm Microphone with DTMF Keypad" width="140" height="175" align="right"> 
+              </div>
+              <table width="32%" border="1" align="center" cellpadding="2" bordercolor="#FFFFFF" bgcolor="#0000FF">
+                <tbody><tr> 
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">1</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">2</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">3</div></td>
+                  <td width="53" bgcolor="#FFFFFF"><div align="center" class="style4 style5">697 Hz</div></td>
+                </tr>
+                <tr> 
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">4</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">5</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">6</div></td>
+                  <td width="53" bgcolor="#FFFFFF"><div align="center" class="style6">770 Hz</div></td>
+                </tr>
+                <tr> 
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">7</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">8</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">9</div></td>
+                  <td width="53" bgcolor="#FFFFFF"><div align="center" class="style6">852 Hz</div></td>
+                </tr>
+                <tr> 
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">*</div></td>
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">0</div></td>
+
+                  <td width="56" class="TextBoldWhite"> <div align="center" class="style4">#</div></td>
+                  <td width="53" bgcolor="#FFFFFF"><div align="center" class="style6">941 Hz</div></td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width="56"><div align="center" class="style5 style4"><strong>1209 Hz</strong></div></td>
+                  <td width="56"><div align="center" class="style5 style4"><strong>1336 Hz</strong></div></td>
+                  <td width="56"><div align="center" class="style5 style4"><strong>1477 Hz</strong></div></td>
+
+                  <td width="53"><div align="center"></div></td>
+                </tr>
+              </tbody></table>
+              <p>When you press the digit 1 on the keypad, you generate the tones 
+                1209 Hz and 697 Hz.</p>
+              <p>Pressing the digit 2 will generate the tones 1336 Hz and 697 
+                Hz. </p>
+              <p>Sure, the tone 697 is the same for both digits, but it take
+                two  tones to make a digit and the decoding equipment knows 
+                the difference between the 1209 Hz that would complete the digit
+                 1, and a 1336 Hz that completes a digit 2.</p>
+              <hr>
+              <br>
+              <h3 class="style7">What the phone company never told you.</h3>
+              <p>While the engineers were designing this protocol, they decided 
+                to throw in a few more "special purpose" tone groups. 
+                You don't normally see these extra four buttons on telephones, 
+                but they are alive and being employed for communications signaling.</p>
+              <p>For lack of imagination, the engineers called the four extra 
+                digits "A B C D". These all use the same row frequencies 
+                as a standard keypad, but they have an additional column tone.</p>
+              <p>&nbsp;</p>
+							
+              <table width="45%" border="1" align="center" cellpadding="2" bordercolor="#FFFFFF" bgcolor="#0000FF">
+
+                <tbody><tr> 
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">1</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">2</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">3</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">A</div></td>
+                  <td width="80" bgcolor="#FFFFFF"> <div align="center" class="style5 style4 style5"><strong>697 Hz</strong></div></td>
+                </tr>
+                <tr> 
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2"><strong>4</strong></div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">5</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">6</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">B</div></td>
+                  <td width="80" bgcolor="#FFFFFF"> <div align="center" class="style5 style4 style5"><strong>770 Hz</strong></div></td>
+                </tr>
+                <tr> 
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2">7</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2">8</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2">9</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2">C</div></td>
+                  <td width="80" bgcolor="#FFFFFF"> <div align="center" class="style2 style5"><strong>852 Hz</strong></div></td>
+                </tr>
+                <tr> 
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style2"><strong>*</strong></div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">0</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">#</div></td>
+                  <td width="60" class="TextBoldWhite"> <div align="center" class="style4">D</div></td>
+                  <td width="80" bgcolor="#FFFFFF"> <div align="center" class="style5 style4 style5"><strong>941 Hz</strong></div></td>
+                </tr>
+                <tr bgcolor="#FFFFFF"> 
+                  <td width="60"><div align="center"><strong>1209 Hz</strong></div></td>
+                  <td width="60"><div align="center"><strong>1336 Hz</strong></div></td>
+                  <td width="60"><div align="center"><strong>1477 Hz</strong></div></td>
+                  <td width="60"><div align="center"><strong>1633 Hz</strong></div></td>
+                  <td width="80" bgcolor="#FFFFFF"><div align="center"><span class="style5"></span></div></td>
+                </tr>
+              </tbody></table>
+              <p>The extra codes are very useful in preventing standard telephone 
+                codes from being used to control remote devices, and can give 
+                you override status when used correctly in a two-way radio system.</p>
+							<hr>
+							<p>&nbsp;</p>	
+              <p><a href="http://www.genave.com/audio/dtmf-page-normal-S00P0501P99.wav"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to a Dtmf command code being send by an encoder at a standard
+                rate. The Dtmf code you hear is *00#0501#99 </p>
+              <p><a href="http://www.genave.com/audio/dtmf-page-slow-CP4D34SS.wav"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to another Dtmf code. This is being sent at a slower rate, but
+                would still activate equipment watching for this code. This code
+                is C#4D34** </p>
+              <p>&nbsp;</p>
+              <hr>
+							<br>
+              <h3 class="style7">What are "Mark" and "Space" ?</h3>							
+							<p>
+							Mark and Space  refer to the duration a Dtmf tone is
+							  produced, as well as the duration of the silence between individual
+							  digits.</p>
+							<p><img src="./Genave - DTMF Explained_files/mark-space.gif" width="497" height="165"></p>
+							<p><a href="http://www.genave.com/dtmf-mark-space.htm">&nbsp;&nbsp;&nbsp;Click here for additional information
+							    on Mark &amp; Space timing.</a></p>
+							<p>&nbsp;</p>
+							<hr>
+              <h3 class="style7">Manual vs Automatic Dtmf Encoders.</h3>	
+							<p>To send the digits  quickly (40/40) you need to be using an
+							  automated encoder since you could not  press each button
+							  by hand that fast. An automated encoder is also called a "Store
+							  and Forward" encoder. You "Store" the Dtmf code into
+							  the device when you program it, then "Forward"  it to send
+							  the entire Dtmf code as one complete Dtmf string of numbers and
+							  characters.</p>
+							<p><img src="./Genave - DTMF Explained_files/motmicdtmfpalm.gif" alt="Palm Microphone with DTMF Keypad" width="140" height="175" align="left"><img src="./Genave - DTMF Explained_files/enc-3300-bluebase.gif" width="150" height="235" align="right"></p>
+							<p>Store
+							  and forward encoders can be a programmable microphone or two-way
+							  radio, a stand-alone encoder such as the ENC-3300, or part of a large
+							  law enforcement dispatch console. In the end they all perform the same
+							  function of sending out Dtmf digits and characters.</p>
+							<p>If you are sending each Dtmf digit by pressing each button individually,
+							  then you are sending the code "Manually", rather than "Automatically" with
+							  a store and forward encoder.</p>
+							
+							<p>&nbsp;&nbsp;&nbsp; <a href="http://www.genave.com/dtmf-encoders-manual-automatic.htm">Click
+							    here for more details on encoders.</a> </p>  		
+              <p>&nbsp;</p>
+							<hr>
+							<br>
+              <p><a href="http://www.genave.com/audio/dtmf-mot-250-250-1646347904.wav"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to a Dtmf command code being sent from an automatic encoder at
+                the standard Motorola rate of 250/250 (2 digits per second).
+                The Dtmf code you hear is 1646347904. </p>
+              <p><a href="http://www.genave.com/audio/dtmf-genave-superfast-20-20-1646347904.wav"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to the same Dtmf code being sent at Genave SuperFast rate of
+                20/20 (25 digits per second) from an automatic encoder. The Dtmf
+                code you hear is also 1646347904.</p>																
+              <p><a href="http://www.genave.com/audio/dtmf-whelen-40-20-461PPPP333.wav" name="whelen_dtmf_timing" id="whelen_dtmf_timing"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to a Dtmf command code being send by an automatic encoder at
+                a standard
+                "Whelen" rate of 16 digits per second. The Dtmf code you
+                hear is 461####333. Standard Whelen timing is 40 msec mark /
+                20 msec space. </p>
+              <p><a href="http://www.genave.com/audio/dtmf-genave-superfast-20-05-1646347904.wav"><img src="./Genave - DTMF Explained_files/play_button.jpg" width="48" height="48"></a> Listen
+                to a Genave decoder responding to a code sent at a blazing
+                Dtmf rate of 20/5 also known as 40 digits per second. This is
+                over twice as fast as  Whelen, over three times faster
+                than Federal Signal, and a whopping 20 times faster than Motorola.
+                The Dtmf code you hear is 1646347904.</p>
+              <p>Genave decoders  give you the ability
+                to respond to Dtmf codes ranging from very slow to extremely
+                fast. </p>
+              <hr>							
+							<br>
+							
+              <h3 class="style7">DTMF Audio Adjustments for Transmitters</h3>
+              <p>Encoders with built-in transmitters normally ship with the audio levels already set.</p>
+              <p>If you are installing a Dtmf encoder onto an existing radio,
+                you can <a href="http://www.genave.com/dtmf-tx-level-adjustments.htm"><br>
+								Click Here for additional technical information on level adjustments. </a></p><br>
+              <hr>
+							<br>							
+						
+              <h3 class="style7">What does this have to do with Two-Way Radios?</h3>
+              <p><img src="./Genave - DTMF Explained_files/motportdtmfpad.gif" alt="Portable Radio with DTMF Keypad" width="78" height="216" hspace="10" align="left">Just 
+                as you dial your telephone to reach another person, you can use 
+                transmit DTMF signals over a radio, and turn things on and off, 
+                flash lights, control motors, cameras, activate warning systems, 
+                turn on irrigation systems, open gates, and in general control 
+                the world!</p>
+              <p>You may have heard some tones at the start of some National News 
+                Broadcasts. These are DTMF tones that CBS or others like them 
+                send out at the start of the broadcast to transfer (or alert to 
+                transfer) their audio onto the local affiliates airwaves. Basically, 
+                it turns on a master switch.</p>
+              <p>Used over two-way radios, you can transmit a DTMF "phone 
+                number". You have the same "phone number" programmed 
+                in a decoder hooked up to a radio receiver at a remote location. 
+                When the decoder sees its "phone number" come in over 
+                the radio, it wakes up and gets to work controlling the things 
+                you have hooked it up to.</p>
+
+              <hr>
+							<br>
+              <h3 class="style7">But it gets even better !</h3>
+              <p>With the better decoders (of course all the Genave decoders are 
+                the better ones) you are able to take phone numbers a step further.</p>
+              <p>You can use Wildcard characters in the phone number. A wildcard 
+                allows you to actually embed information in the phone number. 
+                This information is usually used to control multiple locations 
+                with one DTMF signal.</p>
+              <p>If, for instance, you use DTMF codes to open the overhead doors 
+                on your fire stations in the City. When you have a small fire, 
+                you send the DTMF code that opens only the door on fire station 
+                #1. But when you have a BIG fire, you don't want to waste radio 
+                air-time to transmit 15 DTMF codes to open all 15 overhead doors. 
+                So you program your decoders so that, of course, each one can 
+                be controlled individually, but using a correctly placed wildcard, 
+                they will all respond to a master "Open" signal.</p>
+
+              <p>They can also be set up to respond to another signal for a medium 
+                size fire that opens only the doors on fire stations #1, #5 and 
+                #7.</p>
+              <p>This group, sub-group, sub-sub-group relationship is just a fraction 
+                of power and flexibility when using DTMF to remotely control equipment.</p>
+              <hr>
+							<br>
+              <h3 class="style7">Talk-Back Systems</h3>
+              <p>Of course many times you want the remote equipment to send you 
+                information. What switches are on? How much water has passed through? 
+                What is the current level? Did the door open? </p>
+              <p>When you need to receive information from the remote site, you 
+                add a transmitter and viola! You have a talk-back system.</p>
+
+              <p>A talk-back system (aka SCADA) sends information back to you 
+                via DTMF. This DTMF signal can light status maps, turn on indicators 
+                or supply information to computers, printers or recorders, you 
+                make the call.</p>
+              <p>DTMF is a true interactive signaling format.</p>
+              <hr>
+							<br>
+              <h3 class="style7">Why not computer signals instead of DTMF</h3>
+              <p>Radios are a particular animal. They are mostly analog and they 
+                are optimized for voice signals. DTMF was designed by the engineers 
+                to be in the normal human voice range.</p>
+              <p>What this means is that DTMF passes transparently over normal 
+                two-way radio channels, narrow-band or wide-band. It doesn't require
+								special channel widths, or expensive equipment. In most instances 
+								you can simply attach a cable to the speaker output of your 
+								two-way radio to a decoder, and it will be ready to go. </p>
+
+              <p>Its straightforward, fast, easy to understand, works on most 
+                any type of radio, and gives the most flexible features for the 
+                lowest cost!</p>		
+
+<script src="./Genave - DTMF Explained_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2888305-1";
+urchinTracker();
+</script>								
+													
+<!-- #EndEditable --><p></p>
+ 
+</td><td scope="col" class="c_r">&nbsp;</td></tr></tbody></table>
+
+<!--end content-->
+
+</div></div></div></div></div></div></div></div></div>
+
+
+<!--bottom-->
+
+<!--footer-->
+<div class="bottom">
+	<div class="bottom_r">
+		<div class="bottom_l">
+		
+		<div class="body3">	<!-- #BeginEditable "body3" -->
+		<div class="footer"></div>
+		<!-- #EndEditable --></div>
+			
+		</div>
+	</div>
+</div>
+<!--main end--></div>
+
+<!--Start favorites-->
+	<div id="bottom_links" style="right: 60px; top: 37px" class="style1"><!-- #BeginLibraryItem "Library/bottom_links.lbi" -->
+<a href="http://www.genave.com/index.htm">Home</a> | 
+<a href="http://www.genave.com/faqs.htm">FAQs</a> | 
+<a href="http://www.genave.com/contact.htm">Contact</a> | 
+<a href="http://www.genave.com/about_us.htm">About</a> | 
+<a href="http://www.genave.com/privacy.htm">Privacy</a> | 
+<a href="http://www.firefox.com/">Best viewed with FireFox</a> <!-- #EndLibraryItem --></div>
+		
+<!--Start contact-->
+	<div id="site_info" style="right: 130px; top: 37px" class="style1"><!-- #BeginLibraryItem "Library/site_info.lbi" -->
+<style type="text/css">
+<!--
+.style3 {
+	font-size: xx-small;
+	color: #999999;
+}
+-->
+</style>
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td> Copyright © 2014. Genave/NRC, Inc. All Rights Reserved.<br>
+<span class="style3">All information including availability, prices and specifications
+are subject to change without notice.</span>
+</td>
+	</tr>
+</tbody></table><!-- #EndLibraryItem --></div>
+
+
+<!-- #EndTemplate --></body></html>

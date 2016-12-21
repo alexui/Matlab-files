@@ -1,0 +1,48 @@
+﻿.dropmenudiv				{border: 1px solid #665; margin-left:30px;}
+.dropmenudiv				{background-color: #D5DAE1;}
+.dropmenudiv a:hover        {background-color: #394462;}/* change in font.css as well */
+.dropmenudiv a:active       {background-color: #D5DAE1;}
+.dropmenudiv a:visited      {background-color: #D5DAE1;}
+.dropmenudiv a:link         {background-color: #D5DAE1;}
+.dropmenudiv				{border: 1px solid #BBB;}
+.dropmenudiv a				{text-indent: 3px;	border-bottom: 1px solid #bbb;}
+
+.chromestyle ul li a		{border-right: 1px solid #A5AFBC;}
+
+.Vertical_Menu				{width: 200px; margin: 0px; padding: 12px 40px 20px 0px;}
+.Vertical_Menu li a 		{height: 22px; voice-family: "\"}\""; voice-family: inherit; height: 22px;}	
+.Vertical_Menu li a:visited {padding:7px 0px 0px 35px;}						
+.Vertical_Menu li a:link 	{padding:7px 0px 0px 35px;}				
+.Vertical_Menu li a:hover 	{padding:7px 0px 0px 35px;}
+
+/* ######### Style for Drop Down Menu ######### */
+.menuAlignment 				{padding: 0px 0px 0px 0px;} ul.myVerticalMenu {list-style: none;margin: 0;padding: 0;} img {border: none;} 
+
+.Vertical_Menu li a:visited {display: block; background: url('../graphics/vertical_menu.jpg');}						
+.Vertical_Menu li a:link 	{display: block; background: url('../graphics/vertical_menu.jpg');}	
+.Vertical_Menu li a:hover 	{background: url('../graphics/vertical_menu.jpg') 0 -30px;}	
+/*///////////////////////////////////////////////////*/
+
+.chromestyle{margin-right:45px;}
+
+.chromestyle:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+.chromestyle ul{border: 0px solid #BBB;width: 100%;background: url("../graphics/chromebg.gif") center center repeat-x; /*THEME CHANGE HERE*/padding: 4px 0;margin: 0;
+text-align: right; /*set value to "left", "center", or "right"*/}
+
+.chromestyle ul li{display: inline;}
+
+.chromestyle ul li a{padding: 4px 7px;margin: 0px 0px 0px -3px;}
+
+.chromestyle ul li a:hover{background: url("../graphics/chromebg-over.gif") center center repeat-x; /*THEME CHANGE HERE*/margin: 0px 0px 0px -3px;}
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv{position:absolute;top:0; border-bottom-width:0; line-height:18px; z-index:100; width:200px; visibility:hidden;}
+
+.dropmenudiv a{width: auto;display: block; padding: 2px 0;}
+
+* html .dropmenudiv a{ /*IE only hack*/width: 100%;}
+
+
+
